@@ -21,9 +21,9 @@
     var pools = {
         pairs: [
             ["Brendan Greene's", ["Magic Machine", "Fight Ravine", "Sideways Lean", "Shine n' Gleam", "Coming Clean", "Magical Bean", "Bug Screen", "Gaming Scene", "Have You Seen?", "Party Bean"]],
-            ["Brenden Grenden's", ["Battle Grenden", "British Referendum", "Increased Momentum", "Physics Intervention"]],
+            ["Brenden Grenden's", ["Battle Grenden", "British Referendum", "Increased Momentum", "Physics Intervention", "Stretched Tendon", "Opposite Intention", "Anti-Cheat Circumvention", "Nonintervention", "Cooking Inattention", "Score Correction"]],
             ["Playerunknown's", ["Daily Moan", "Cordless Phone", "Gunplay Zone", "Payday Loan", "Traffic Cone", "Bone Zone", "Dial Tone", "Loud Trombone", "Public Telephone", "Blue Cheese Cologne", "Low Groan", "Leave Me Alone", "Jesus Atone", "Brutal Disown", "Incoming Cyclone", "Broken Collarbone", "Xylophone", "Foreknown Pheromone", "Dreary Monotone", "Broken Hipbone", "Biaural Microphone", "Saw Your Sister In The Cornerstone", "Release Postponed"]],
-            ["Bluehole's", ["Bridge Troll", "Remote Control"], ["Pigeonhole", "Beanpole", "Cubbyhole", "Screwhole", "Loo Roll", "Soul", "Collection of Foals", "Bowl", "Casserole", "Glycerol", "Bedroll", "Profiterole", "Buttonhole", "Morning Stroll"]],
+            ["Bluehole's", ["Bridge Troll", "Remote Control"], ["Pigeonhole", "Beanpole", "Cubbyhole", "Screwhole", "Loo Roll", "Soul Hole", "Collection of Foals", "Bowl", "Casserole", "Glycerol", "Bedroll", "Profiterole", "Buttonhole", "Morning Stroll"]],
             ["Plunder Under's", ["Battle Grunder", "Wonder Lumber", "Battle Wonder", "Bumper Plunger", "Hunter Thunder", "Enourmous Thunder", "Number Blunder", "Car Sunder", "Udder Blunder", "Sulphur Slumber"]]
         ],
         player_alternatives: [
@@ -118,7 +118,7 @@
     }
 
     window.generate = function() {
-        if (r()()) {
+        if (r(0.6)()) {
             displayName(generate(rhymingPattern))
         } else {
             displayName(generate(partsPattern))
