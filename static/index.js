@@ -20,11 +20,12 @@
 
     var pools = {
         pairs: [
-            ["Brendan Greene's", ["Magic Machine", "Fight Ravine", "Sideways Lean", "Shine n' Gleam", "Coming Clean", "Magical Bean", "Bug Screen", "Gaming Scene", "Have You Seen?", "Party Bean"]],
-            ["Brenden Grenden's", ["Battle Grenden", "British Referendum", "Increased Momentum", "Physics Intervention", "Stretched Tendon", "Opposite Intention", "Anti-Cheat Circumvention", "Nonintervention", "Cooking Inattention", "Score Correction"]],
+            ["Brendan Greene's", ["Magic Machine", "Fight Ravine", "Sideways Lean", "Shine n' Gleam", "Coming Clean", "Magical Bean", "Bug Screen", "Gaming Scene", "Have You Seen?", "Party Bean", "Subteen Houseclean", "Spilled Gasoline", "Unseen Evergreen", "Peregrine Wolverine", "Porno Magazine", "Sweet Sixteen", "Unclean Submarine"]],
+            ["Brenden Grenden's", ["Battle Grenden", "British Referendum", "Increased Momentum", "Physics Intervention", "Stretched Tendon", "Opposite Intention", "Anti-Cheat Circumvention", "Nonintervention", "Cooking Inattention", "Score Correction", "Genius Invention", "Tax Exemption", "Seeking Attention", "School Detention", "Furious Contention", "Anime Collection", "Coupon Redemption", "Lawyer Objection", "Reading Comprehension", "Traffic Congestion", "Delicious Confection", "Explosive Decompression", "Geneva Convention", "Contraception Imperfection", "Variable Indentation", "Specific Affection", "Hessian Reception", "Fair Complexion", "Engine Dimension", "Facial Expression", "Faulty Recollection"]],
             ["Playerunknown's", ["Daily Moan", "Cordless Phone", "Gunplay Zone", "Payday Loan", "Traffic Cone", "Bone Zone", "Dial Tone", "Loud Trombone", "Public Telephone", "Blue Cheese Cologne", "Low Groan", "Leave Me Alone", "Jesus Atone", "Brutal Disown", "Incoming Cyclone", "Broken Collarbone", "Xylophone", "Foreknown Pheromone", "Dreary Monotone", "Broken Hipbone", "Biaural Microphone", "Saw Your Sister In The Cornerstone", "Release Postponed"]],
             ["Bluehole's", ["Bridge Troll", "Remote Control"], ["Pigeonhole", "Beanpole", "Cubbyhole", "Screwhole", "Loo Roll", "Soul Hole", "Collection of Foals", "Bowl", "Casserole", "Glycerol", "Bedroll", "Profiterole", "Buttonhole", "Morning Stroll"]],
-            ["Plunder Under's", ["Battle Grunder", "Wonder Lumber", "Battle Wonder", "Bumper Plunger", "Hunter Thunder", "Enourmous Thunder", "Number Blunder", "Car Sunder", "Udder Blunder", "Sulphur Slumber"]]
+            ["Plunder Under's", ["Battle Grunder", "Wonder Lumber", "Battle Wonder", "Bumper Plunger", "Hunter Thunder", "Enourmous Thunder", "Number Blunder", "Car Sunder", "Udder Blunder", "Sulphur Slumber", "Asunder Plumber", "Midsummer Thunder", "Runner Gunner", "Rubber Drummer"]],
+            ["Brendan Booty's", ["Shooty Looty", "Jury Duty", "Tutti Fruity", "Cutie Beauty", "Droopy Cootie", "Snooty Ruby"]]
         ],
         player_alternatives: [
             "Player", "Comrade", "Participant", "Contestant", "Thespian", "Popular", "Performer"
