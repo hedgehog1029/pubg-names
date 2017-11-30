@@ -22,3 +22,27 @@
 .container h2.generated.loading {
     color: #666;
 }
+
+.container a {
+    text-decoration: none;
+    color: #10aded;
+}
+
+.container a:hover {
+    color: #109aef;
+}
+
+button.generate-btn {
+    padding: 15px 25px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: #2ECC40;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    transition: background .25s;
+}
+
+button.generate-btn:hover {
+    background: #2EDC35;
+}
