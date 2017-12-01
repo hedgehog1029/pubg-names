@@ -46,3 +46,11 @@ button.generate-btn {
 button.generate-btn:hover {
     background: #2EDC35;
 }
+
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+}
