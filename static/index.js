@@ -8,7 +8,7 @@
     function e(times, cb) {
         var results = [];
         for (var i = 0; i < times; i++) {
-            results.push(cb());
+            results.push(cb(i));
         }
 
         return results
@@ -31,7 +31,7 @@
         rhymes: [
             ["Brendan Greene", ["Machine", "Ravine", "Lean", "Gleam", "Clean", "Bean", "Sean", "Screen", "Scene", "Seen", "Bean", "Subteen", "Preteen", "Houseclean", "Gasoline", "Unseen", "Evergreen", "Peregrine", "Wolverine", "Magazine", "Sixteen", "Unclean", "Submarine", "Supreme", "Reigime"]],
             ["Brenden Grenden", ["Grenden", "Referendum", "Momentum", "Intervention", "Tendon", "Intention", "Circumvention", "Nonintervention", "Inattention", "Correction", "Invention", "Exemption", "Attention", "Detention", "Contention", "Collection", "Redemption", "Objection", "Comprehension", "Confection", "Decompression", "Convention", "Contraception", "Imperfection", "Indentation", "Affection", "Reception", "Complexion", "Dimension", "Expression", "Recollection"]],
-            ["PLAYERUNKNOWN", ["Moan", "Phone", "Zone", "Loan", "Cone", "Tone", "Trombone", "Telephone", "Cologne", "Groan", "Alone", "Atone", "Disown", "Cyclone", "Collarbone", "Xylophone", "Foreknown", "Pheromone", "Monotone", "Hipbone", "Microphone", "Cornerstone", "Postponed"]],
+            ["PLAYERUNKNOWN", ["Moan", "Home", "Phone", "Zone", "Loan", "Cone", "Tone", "Trombone", "Telephone", "Cologne", "Groan", "Alone", "Atone", "Disown", "Cyclone", "Collarbone", "Xylophone", "Foreknown", "Pheromone", "Monotone", "Hipbone", "Microphone", "Cornerstone", "Postponed"]],
             ["Bluehole", ["Bridge Troll", "Control", "Pigeonhole", "Beanpole", "Pole", "Cubbyhole", "Screwball", "Screwhole", "Roll", "Hole", "Foal", "Bowl", "Casserole", "Glycerol", "Bedroll", "Profiterole", "Buttonhole", "Stroll"]],
             ["Plunder Under", ["Grunder", "Wonder", "Lumber", "Bumper", "Plunger", "Hunter", "Thunder", "Number", "Blunder", "Sunder", "Slumber", "Plumber", "Midsummer", "Runner", "Gunner", "Drummer"]],
             ["Brendan Booty", ["Shooty", "Looty", "Duty", "Tutti", "Fruity", "Cutie", "Beauty", "Droopy", "Ruby", "Snooty", "Loopy"]]
@@ -40,7 +40,8 @@
             "Player", "Comrade", "Participant", "Contestant", "Thespian", "Popular", "Performer", "Chef", "Soldier", "Baker", "General", "Wanderer", "Loner"
         ],
         unknown_alternatives: [
-            ["Unknown", p(false)], ["Nameless", p(true)], ["Unidentified", p(true)], ["Obscure", r()], ["Unsung", p(true)], ["Inglorious", p(true)], ["Unfamiliar", r()], ["Infamous", p(true)], ["Anonymous", p(true)], ["Uncommon", r()]
+            ["Unknown", p(false)], ["Nameless", p(true)], ["Unidentified", p(true)], ["Obscure", r()], ["Unsung", p(true)], ["Inglorious", p(true)],
+            ["Unfamiliar", r()], ["Infamous", p(true)], ["Anonymous", p(true)], ["Uncommon", r()], ["Secret", p(true)]
         ],
         battle_alternatives: [
             "Battle", "Ideology", "Cookware", "Punchfight", "Conflict", "Fight", "Engagement", "Struggle", "Combat", "Beetle", "Bottle", "Zombie", "Gunplay", "Death"
@@ -49,10 +50,13 @@
             "Grounds", "Dustup", "Island", "Yard", "Field", "Parcel", "Sediment", "Quarry", "Kitchen", "Laboratory", "School", "Office", "Plains", "Mountain"
         ],
         full_names: [
-            "Secret Player", "Unnamed Person", "Mystery Guy", "Brendan Greene"
+            "Unnamed Person", "Mystery Guy", "Brendan Greene"
         ],
         full_suffixes: [
             "Frank Exchange of Bullets", "All-Caps Gunplay", "Shooty Shooty Bang Bang", "Dying to Death Simulator", "Zombie Island"
+        ],
+        filler: [
+            "Fight", "Magic", "British", "American", "Traffic", "Gunplay", "Cordless", "Daily", "Engine", "Faulty", "Specific", "Furious"
         ]
     }
 
@@ -61,7 +65,11 @@
         rhymepair: function() {
             var slots = randomFrom(pools.rhymes);
             var prefix = slots[0] + "'s";
-            var suffix = e(2, function() {
+            var suffix = e(2, function(i) {
+                if (i == 0 && r(0.1)()) {
+                    return randomFrom(pools.filler);
+                }
+
                 return randomFrom(slots[1])
             }).join(" ");
 
