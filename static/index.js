@@ -32,12 +32,12 @@
             ["Brendan Greene", ["Machine", "Ravine", "Lean", "Gleam", "Clean", "Bean", "Sean", "Screen", "Scene", "Seen", "Bean", "Subteen", "Preteen", "Houseclean", "Gasoline", "Unseen", "Evergreen", "Peregrine", "Wolverine", "Magazine", "Sixteen", "Unclean", "Submarine", "Supreme", "Reigime"]],
             ["Brenden Grenden", ["Grenden", "Referendum", "Momentum", "Intervention", "Tendon", "Intention", "Circumvention", "Nonintervention", "Inattention", "Correction", "Invention", "Exemption", "Attention", "Detention", "Contention", "Collection", "Redemption", "Objection", "Comprehension", "Confection", "Decompression", "Convention", "Contraception", "Imperfection", "Indentation", "Affection", "Reception", "Complexion", "Dimension", "Expression", "Recollection"]],
             ["PLAYERUNKNOWN", ["Moan", "Home", "Phone", "Zone", "Loan", "Cone", "Tone", "Trombone", "Telephone", "Cologne", "Groan", "Alone", "Atone", "Disown", "Cyclone", "Collarbone", "Xylophone", "Foreknown", "Pheromone", "Monotone", "Hipbone", "Microphone", "Cornerstone", "Postponed"]],
-            ["Bluehole", ["Bridge Troll", "Control", "Pigeonhole", "Beanpole", "Pole", "Cubbyhole", "Screwball", "Screwhole", "Roll", "Hole", "Foal", "Bowl", "Casserole", "Glycerol", "Bedroll", "Profiterole", "Buttonhole", "Stroll"]],
+            ["Bluehole", 3, ["Bridge Troll", "Control", "Pigeonhole", "Beanpole", "Pole", "Cubbyhole", "Screwball", "Screwhole", "Roll", "Hole", "Foal", "Bowl", "Casserole", "Glycerol", "Bedroll", "Profiterole", "Buttonhole", "Stroll"]],
             ["Plunder Under", ["Grunder", "Wonder", "Lumber", "Bumper", "Plunger", "Hunter", "Thunder", "Number", "Blunder", "Sunder", "Slumber", "Plumber", "Midsummer", "Runner", "Gunner", "Drummer"]],
             ["Brendan Booty", ["Shooty", "Looty", "Duty", "Tutti", "Fruity", "Cutie", "Beauty", "Droopy", "Ruby", "Snooty", "Loopy"]]
         ],
         player_alternatives: [
-            "Player", "Comrade", "Participant", "Contestant", "Thespian", "Popular", "Performer", "Chef", "Soldier", "Baker", "General", "Wanderer", "Loner"
+            "Player", "Comrade", "Participant", "Contestant", "Thespian", "Popular", "Performer", "Chef", "Soldier", "Baker", "General", "Wanderer", "Loner", "Guy"
         ],
         unknown_alternatives: [
             ["Unknown", p(false)], ["Nameless", p(true)], ["Unidentified", p(true)], ["Obscure", r()], ["Unsung", p(true)], ["Inglorious", p(true)],
@@ -56,7 +56,7 @@
             "Frank Exchange of Bullets", "All-Caps Gunplay", "Shooty Shooty Bang Bang", "Dying to Death Simulator", "Zombie Island"
         ],
         filler: [
-            "Fight", "Magic", "British", "American", "Traffic", "Gunplay", "Cordless", "Daily", "Engine", "Faulty", "Specific", "Furious"
+            "Fight", "Magic", "British", "American", "Traffic", "Gunplay", "Cordless", "Daily", "Engine", "Faulty", "Specific", "Furious", "Increased", "Bridge"
         ]
     }
 
@@ -65,12 +65,20 @@
         rhymepair: function() {
             var slots = randomFrom(pools.rhymes);
             var prefix = slots[0] + "'s";
-            var suffix = e(2, function(i) {
+            var slotPool = slots[1];
+            var words = 2;
+
+            if (slots.length == 3) {
+                slotPool = slots[2];
+                words = slots[1];
+            }
+
+            var suffix = e(words, function(i) {
                 if (i == 0 && r(0.1)()) {
                     return randomFrom(pools.filler);
                 }
 
-                return randomFrom(slots[1])
+                return randomFrom(slotPool)
             }).join(" ");
 
             return [prefix, suffix].join(" ");
