@@ -34,7 +34,10 @@
             ["PLAYERUNKNOWN", ["Moan", "Home", "Phone", "Zone", "Loan", "Cone", "Tone", "Trombone", "Telephone", "Cologne", "Groan", "Alone", "Atone", "Disown", "Cyclone", "Collarbone", "Xylophone", "Foreknown", "Pheromone", "Monotone", "Hipbone", "Microphone", "Cornerstone", "Postponed", "Red Zone"]],
             ["Bluehole", ["Bridge Troll", "Control", "Pigeonhole", "Beanpole", "Pole", "Screwball", "Screwhole", "Roll", "Foal", "Bowl", "Casserole", "Glycerol", "Bedroll", "Profiterole", "Stroll", "Mole", "Innersole"]],
             ["Plunder Under", ["Grunder", "Wonder", "Lumber", "Bumper", "Plunger", "Hunter", "Thunder", "Number", "Blunder", "Sunder", "Slumber", "Plumber", "Midsummer", "Runner", "Gunner", "Drummer"]],
-            ["Brendan Booty", ["Shooty", "Looty", "Duty", "Tutti", "Fruity", "Cutie", "Beauty", "Droopy", "Ruby", "Snooty", "Loopy"]]
+            ["Brendan Booty", ["Shooty", "Looty", "Duty", "Tutti", "Fruity", "Cutie", "Beauty", "Droopy", "Ruby", "Snooty", "Loopy"]],
+            ["Extremely Spiteful", ["Rifle", "Trifle", "Delightful", "Title", "Stifle", "Direful", "Vital", "Bible", "Cycle"]],
+            ["Bluehole Group", ["Soup", "Poop", "Hoop", "Troop", "Loop", "Troupe", "Coop", "Coupe", "Regroup", "Scoop", "Swoop", "Paratroop"]],
+            ["Shrinking Map", ["Scrap", "Nap", "App", "Cap", "Gap", "Chap", "Lap", "Tap", "Sap", "Snap", "Wrap", "Rap", "Trap", "Flap", "Bitmap", "Slap", "Clap", "Crap", "Overlap", "Thermostat", "Habitat"]]
         ],
         player_alternatives: [
             "Player", "Comrade", "Participant", "Contestant", "Thespian", "Popular", "Performer", "Chef", "Soldier", "Baker", "General", "Wanderer", "Loner", "Guy", "Person"
@@ -56,7 +59,7 @@
             "Frank Exchange of Bullets", "All-Caps Gunplay", "Shooty Shooty Bang Bang", "Dying to Death Simulator", "Zombie Island", "Extreme Fishing"
         ],
         filler: [
-            "Fight", "Magic", "British", "American", "Traffic", "Gunplay", "Cordless", "Daily", "Engine", "Faulty", "Specific", "Furious", "Increased", "Bridge"
+            "Fight", "Magic", "British", "American", "Traffic", "Gunplay", "Cordless", "Daily", "Engine", "Faulty", "Specific", "Furious", "Increased", "Bridge", "Extremely", "Gameplay"
         ]
     }
 
@@ -74,7 +77,7 @@
             }
 
             var suffix = e(words, function(i) {
-                if (i == 0 && r(0.1)()) {
+                if (i == 0 && r(0.3)()) {
                     return randomFrom(pools.filler);
                 }
 
